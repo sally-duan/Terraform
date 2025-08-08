@@ -1,8 +1,3 @@
-provider "aws" {
-  access_key = "AKIAUPH7XADD7KDMYNFK"
-  secret_key = "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"
-  region     = "us-west-1"
-}
 
 resource "aws_vpc" "myvpc" {
   cidr_block = "10.0.0.0/16"
@@ -61,4 +56,5 @@ output "db_security_group_id" {
 
 output "vpc_id" {
   value = aws_vpc.myvpc.id
+
 }
